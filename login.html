@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Screen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #3f89b3;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        button:hover {
+            background-color: #3279a0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3f89b3;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>App Logo</h1>
+        
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <button type="submit">Login</button>
+        </form>
+        
+        <h3>Or sign in with:</h3>
+        <button>Google</button>
+        <button>Instagram</button><br><br>
+        
+        <a href="#">Sign Up</a><br>
+        <a href="#">Forgot Password?</a><br>
+        <a href="#">Help and Support</a>
+    </div>
+</body>
+</html>
