@@ -106,24 +106,28 @@
 
 <body>
 	<div>
-		<h1>App Logo</h1>
+		
+       <div class="container">
+        <div class="logo">
+            LOGO
+        </div>
+        
+      			<p>Sign up with:</p>
+			<button>Google</button>
+			<button>LinkedIn</button>
+			<button>Instagram</button>
 		<form>
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name" required>
 			<label for="email">Email:</label>
 			<input type="email" id="email" name="email" required>
-			<label for="phone-country-code">Phone Number Country Code:</label>
-			<select id="phone-country-code" name="phone-country-code" required>
-				<option value="">Select Country Code</option>
-				<option value="+1">+1 (USA)</option>
-				<option value="+44">+44 (UK)</option>
-				<option value="+91">+91 (India)</option>
-				<option value="+971">+971 (UAE)</option>
-				<option value="+962">+962 (Jordan)</option>
-			</select>
+
 			<label for="phone-number">Phone Number:</label>
 			<input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" required>
-			<label for="account-type">Account Type:</label>
+		<label for="password">Password:</label>
+			<input type="tel" id="password-number" name="password-number" placeholder="*****************" required>
+	
+          <label for="account-type">Account Type:</label>
 			<div id="account-type">
 				<label><input type="radio" name="account-type" value="enterprise"> Enterprise</label>
 				<label><input type="radio" name="account-type" value="professional"> Professional</label>
@@ -145,10 +149,7 @@
           
 		</form>
       		
-			<p>or sign up with:</p>
-			<button>Google</button>
-			<button>LinkedIn</button>
-			<button>Instagram</button>
+
 		
 	</div>
 	<script>
