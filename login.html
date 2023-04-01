@@ -25,9 +25,17 @@
             max-width: 400px;
         }
 
-        h1 {
+        .logo {
+            background-color: #3f89b3;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
             font-size: 1.5rem;
-            margin-bottom: 2rem;
         }
 
         label {
@@ -72,7 +80,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>App Logo</h1>
+        <div class="logo">
+            LOGO
+        </div>
         
         <form>
             <label for="email">Email:</label>
@@ -86,7 +96,8 @@
         
         <h3>Or sign in with:</h3>
         <button>Google</button>
-        <button>Instagram</button><br><br>
+        <button>Instagram</button>
+        <button>LinkedIn</button><br><br>
         
         <a href="#">Sign Up</a><br>
         <a href="#">Forgot Password?</a><br>
