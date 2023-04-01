@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile Verification Screen</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+		}
+
+		div {
+			background-color: #fff;
+			padding: 2rem;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			width: 100%;
+			max-width: 400px;
+		}
+
+		h1 {
+			color: #3f89b3;
+			font-size: 2rem;
+			margin: 0 0 2rem;
+		}
+
+		p {
+			color: #666;
+			font-size: 1.2rem;
+			margin: 0 0 1rem;
+		}
+
+		label {
+			display: block;
+			margin: 0.5rem 0;
+			color: #666;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+
+		input {
+			width: 100%;
+			padding: 0.5rem;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+
+		button {
+			background-color: #3f89b3;
+			color: #fff;
+			border: none;
+			border-radius: 3px;
+			padding: 0.75rem 1rem;
+			font-size: 1.2rem;
+			cursor: pointer;
+			margin-top: 1rem;
+			display: inline-block;
+		}
+
+		button:hover {
+			background-color: #3279a0;
+		}
+
+		#countdown {
+			color: #666;
+			font-size: 1.2rem;
+		}
+
+		a {
+			color: #3f89b3;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>App Logo</h1>
+		<p>A verification code has been sent to your phone number</p>
+		<form>
+			<label for="verification-code">Verification Code:</label>
+			<input type="text" id="verification-code" name="verification-code" required>
+			<button type="submit">Verify</button>
+		</form>
+		<p>Didn't receive the code? <span id="countdown">60</span> seconds until you can <a href="#">resend</a>.</p>
+	</div>
+
+	<script>
+		let countdownTimer = setInterval(function() {
+			let countdownElement = document.getElementById("countdown");
+			let countdown = Number(countdownElement.innerHTML);
+			if (countdown == 1) {
+				clearInterval(countdownTimer);
+				let resendLink = document.createElement("a");
+				resendLink.href = "#";
+				resendLink.innerHTML = "Resend code";
+				resendLink.onclick = function() {
+					countdownElement.innerHTML = "60";
+					return false;
+				};
+				let resendText = document.createTextNode("Resend code");
+				countdownElement.innerHTML = "";
+				countdownElement.appendChild(resendText);
