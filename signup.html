@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,7 @@
 			margin: 0;
 		}
 
-		div {
+		.container {
 			background-color: #fff;
 			padding: 2rem;
 			border-radius: 5px;
@@ -84,14 +86,19 @@
 
 		#account-type label {
 			margin-right: 1rem;
+			display: flex;
+			align-items: center;
 		}
 
-		#account-type input[type="radio"] {
+		#account-type label input[type="radio"] {
 			margin-right: 0.5rem;
+			width: auto;
+			height: auto;
 		}
 
 		.services-wrapper {
 			position: relative;
+			margin-bottom: 1rem;
 		}
 
 		.services-other {
@@ -102,20 +109,43 @@
 			right: 0;
 			margin-top: 0.5rem;
 		}
+
+		.services-other label {
+			display: block;
+			margin: 0.5rem 0;
+			color: #666;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+
+		.services-other input[type="text"] {
+			width: 100%;
+			padding: 0.5rem;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+		}
 	</style>
+</head
 
 <body>
 	<div>
+      <div>
 		
        <div class="container">
         <div class="logo">
             LOGO
         </div>
         
-      			<p>Sign up with:</p>
+      			
+		<h1>App Logo</h1>
+		<div>
+          
+          
+          <p>Sign up with:</p>
 			<button>Google</button>
 			<button>LinkedIn</button>
 			<button>Instagram</button>
+		</div>
 		<form>
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name" required>
@@ -124,10 +154,7 @@
 
 			<label for="phone-number">Phone Number:</label>
 			<input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" required>
-		<label for="password">Password:</label>
-			<input type="tel" id="password-number" name="password-number" placeholder="*****************" required>
-	
-          <label for="account-type">Account Type:</label>
+			<label for="account-type">Account Type:</label>
 			<div id="account-type">
 				<label><input type="radio" name="account-type" value="enterprise"> Enterprise</label>
 				<label><input type="radio" name="account-type" value="professional"> Professional</label>
@@ -146,11 +173,7 @@
 				<span class="add-services-other" style="cursor: pointer; margin-left: 1rem;">+</span>
 			</div>
 			<button type="submit">Sign Up</button>
-          
 		</form>
-      		
-
-		
 	</div>
 	<script>
 		document.querySelector('#services').addEventListener('change', (event) => {
@@ -164,15 +187,7 @@
 		document.querySelector('.add-services-other').addEventListener('click', (event) => {
 			event.preventDefault();
 			const servicesOther = document.querySelector('.services-other');
-			const inputs = servicesOther.querySelectorAll('input[name^="services-other"]');
-			const input = document.createElement('input');
-			input.type = 'text';
-			input.name = 'services-other[]';
-			input.style.display = 'block';
-			input.style.marginTop = '1rem';
-			input.placeholder = 'Other Service ' + (inputs.length + 2);
-			servicesOther.insertBefore(input, document.querySelector('.add-services-other'));
-		});
-	</script>
+			const inputs = servicesOther
+
 </body>
 </html>
